@@ -1,0 +1,33 @@
+{
+  "name": "book_es6",
+  "version": "1.0.0",
+  "description": "Update bookExpress using ES6 and pug",
+  "main": "init.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node init.js --delay 2"
+  },
+  "author": "Jun",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.2",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^7.0.0",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "mongoose": "^5.4.19",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "nodemon": "^1.18.10",
+    "prettier": "^1.16.4",
+    "pug": "^2.0.3"
+  }
+}
