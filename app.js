@@ -7,6 +7,7 @@ import routes from "./routes";
 import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import textRouter from "./routers/textRouter";
+import localsMiddleware from "./middlewares";
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.use(helmet());
 app.use(cookiePaser());
 app.use(bodyPaser.json());
 app.use(bodyPaser.urlencoded({ extended: true }));
+app.use(morgan("dev"));
+app.use(localsMiddleware);
 
 app.set("view engine", "pug");
 app.set("views", "./views");
