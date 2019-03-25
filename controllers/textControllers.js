@@ -2,20 +2,17 @@ export const home = (req, res) => {
   res.render("home");
 };
 export const search = (req, res) => {
-  res.send("search");
-};
-export const text = (req, res) => {
-  res.send("text");
+  res.render("search");
 };
 export const upload = (req, res) => {
-  res.send("upload");
+  res.render("upload");
 };
 export const textDetail = (req, res) => {
-  res.send("textDetail");
+  res.render("textDetail");
 };
 export const textEdit = (req, res) => {
-  res.send("textEdit");
+  res.render("textEdit");
 };
 export const textDelete = (req, res) => {
-  res.send("textDelete");
+  res.render("textDelete");
 };

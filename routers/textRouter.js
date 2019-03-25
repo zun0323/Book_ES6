@@ -10,7 +10,6 @@ import {
 
 const textRouter = express.Router();
 
-textRouter.get(routes.text, text);
 textRouter.get(routes.upload, upload);
 textRouter.get(routes.textDetail, textDetail);
 textRouter.get(routes.textEdit, textEdit);
