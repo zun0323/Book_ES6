@@ -5,7 +5,7 @@ export const login = (req, res) => {
   res.render("login");
 };
 export const logout = (req, res) => {
-  res.render("logout");
+  res.send("logout");
 };
 export const userDetail = (req, res) => {
   res.render("userDetail");

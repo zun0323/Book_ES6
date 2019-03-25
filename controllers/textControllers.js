@@ -14,5 +14,5 @@ export const textEdit = (req, res) => {
   res.render("textEdit");
 };
 export const textDelete = (req, res) => {
-  res.render("textDelete");
+  res.send("textDelete");
 };
