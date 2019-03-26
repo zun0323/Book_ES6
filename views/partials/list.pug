@@ -1,7 +1,10 @@
 .list
-    h5 list 1
-    h5 list 2
-    h5 list 3
+    each item in db
+        a(href=routes.textDetail) 
+            h5.text__title=item.title
+            h6.text__author=item.author
+            h6.text__views=item.views
+            h6.text__createdAt=item.createdAt
 
 .search__form
     from(action=routes.search, method="get")

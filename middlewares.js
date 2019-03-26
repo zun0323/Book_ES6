@@ -1,4 +1,5 @@
 import routes from "./routes";
+import db from "./db";
 
 const localsMiddleware = (req, res, next) => {
   res.locals.siteName = "Book Review";
@@ -7,6 +8,7 @@ const localsMiddleware = (req, res, next) => {
     isAuthenticated: true,
     id: 5
   };
+  res.locals.db = db;
   next();
 };
 
