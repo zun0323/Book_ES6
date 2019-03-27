@@ -8,6 +8,7 @@ const localsMiddleware = (req, res, next) => {
     isAuthenticated: true,
     id: 5
   };
+  res.locals.genre = ["genre 01", "genre 02", "genre 03"];
   res.locals.db = db;
   next();
 };
