@@ -2,3 +2,17 @@ header.header
     .header__column
         a(href=routes.home)
             i.fab.fa-youtube
+    .header__column
+        ul
+            if user.isAuthenticatd === false
+                li
+                    a(href=routes.join) Join 
+                li
+                    a(href=routes.login) Log in
+            else 
+                li
+                    a(href=(routes.text)+(routes.upload)) Up load
+                li
+                    a(href=routes.userDetail(user.id)) Profile
+                li
+                    a(href=routes.logout) Log out

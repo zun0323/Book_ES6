@@ -25,7 +25,12 @@ const routes = {
   logout: LOGOUT,
   search: SEARCH,
   user: USER,
-  userDetail: USER_DETAIL,
+  userDetail: id => {
+    if (id) {
+      return `${USER}/${id}`;
+    }
+    return USER_DETAIL;
+  },
   editProfile: EDIT_PROFILE,
   changePassword: CHANGE_PASSWORD,
   text: TEXT,
