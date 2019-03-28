@@ -1,15 +1,17 @@
 import express from "express";
 import routes from "../routes";
 import {
-  upload,
   textDetail,
   textEdit,
-  textDelete
+  textDelete,
+  getUpload,
+  postUpload
 } from "../controllers/textControllers";
 
 const textRouter = express.Router();
 
-textRouter.get(routes.upload, upload);
+textRouter.get(routes.upload, getUpload);
+textRouter.post(routes.upload, postUpload);
 textRouter.get(routes.textDetail, textDetail);
 textRouter.get(routes.textEdit, textEdit);
 textRouter.get(routes.textDelete, textDelete);
