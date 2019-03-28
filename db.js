@@ -1,28 +1,14 @@
-const db = [
-  {
-    id: "89765",
-    views: 0,
-    title: "Kim",
-    author: "Ryan",
-    description: "first one",
-    createdAt: "2019-03-22T11:05:57.242Z"
-  },
-  {
-    id: "66554",
-    views: 0,
-    title: "Tempest",
-    author: "Ryan",
-    description: "first Video",
-    createdAt: "2019-03-22T11:05:57.242Z"
-  },
-  {
-    id: "43212",
-    views: 0,
-    title: "Hatchet",
-    author: "Ryan",
-    description: "first Video",
-    createdAt: "2019-03-22T11:05:57.242Z"
-  }
-];
+import mongoose from "mongoose";
 
-export default db;
+mongoose.connect("mongodb://localhost:27017/book", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
+
+const db = mongoose.connection;
+
+const handleOpen = () => console.log("♻️  Connected to mongoDB");
+const handleError = error => console.log(`❌  Error on DB Connection:${error}`);
+
+db.once("open", handleOpen);
+db.on("error", handleError);
